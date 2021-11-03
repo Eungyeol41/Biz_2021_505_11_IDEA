@@ -1,0 +1,38 @@
+table, tr, th, td {
+    border-bottom: 1px solid darkgray;
+    border-top: 1px solid darkgray;
+}
+
+table {
+    width: 80vw;
+    margin: 1rem auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+tr#table_th {
+    background-color: #eee;
+}
+
+th {
+    padding: 0.5rem;
+}
+
+td {
+    padding: 0.3rem;
+}
+
+div.div_btn {
+    width: 80%;
+}
+
+div.div_btn button {
+    margin-left: auto;
+    width: 20%;
+    text-align: center;
+    display: block;
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    border-radius: 15px;
+}

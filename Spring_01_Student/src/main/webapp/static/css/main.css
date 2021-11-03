@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+    background-color: lightblue;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    background-color: cadetblue;
+    color: white;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 8px;
+    text-decoration: none;
+    margin: 8px;
+    cursor: pointer;
+}
+
+li#login {
+    margin-left: auto;
+}
