@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+    <!--
+    와일드 카드
+    * : 모든 것 (단어, 스펠 개수에 관계없이)
+    ? : 스펠의 개수만큼
+        ex) a? = a1, a2, aa, ab, ac ... 등과 일치하는 패턴
+            a?? = a11, a21, abb, acc .. 등과 일치하는 패턴
+    -->
+
+<!-- tiles layout을 설정하기 위한 영역 -->
+<tiles-definitions>
+    <!--  각각의 fragment를 설정하는 부분  -->
+    <definition name="default" template="/WEB-INF/views/main_layout.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/fragment/header.jsp" />
+        <put-attribute name="nav" value="/WEB-INF/views/fragment/nav.jsp" />
+        <put-attribute name="content" value="" />
+        <put-attribute name="footer" value="/WEB-INF/views/fragment/footer.jsp" />
+    </definition>
+
+    <!-- default로 설정된 부분을 상속받고 content 부분만 별도로 재설정하겠다 -->
+    <!-- default에 설정되어있는 친구들을 모두 가져와라!! -->
+    <definition name="HOME" extends="default">
+        <!-- content 부분만 value를 다시 설정하겠다!! -->
+        <!-- override(재정의) -->
+        <put-attribute name="content" value="/WEB-INF/views/home.jsp" />
+    </definition>
+
+    <definition name="ST/*" extends="default">
+        <put-attribute name="content" value="/WEB-INF/views/student/{1}.jsp" />
+    </definition>
+
+    <definition name="*/*" extends="default">
+        <put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp" />
+    </definition>
+
+</tiles-definitions>

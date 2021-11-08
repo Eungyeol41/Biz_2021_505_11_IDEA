@@ -1,8 +1,8 @@
 package com.callor.student.dispatcher;
 
 import com.callor.student.controller.StController3;
-import com.callor.student.service.StService;
-import com.callor.student.service.StService2;
+import com.callor.student.service.impl.StService;
+import com.callor.student.service.impl.StService2;
 
 public class Dispatcher_03 {
     public static void main(String[] args) {

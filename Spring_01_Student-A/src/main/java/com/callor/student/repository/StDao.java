@@ -7,9 +7,13 @@ import java.util.List;
 public interface StDao {
 
     public List<StudentVO> selectAll();
+
     public List<StudentVO> findById(String st_num);
+
     public void insert(StudentVO vo);
+
     public void update(StudentVO vo);
+
     public void delete(String st_num);
 
 }

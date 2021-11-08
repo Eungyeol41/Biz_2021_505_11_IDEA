@@ -1,4 +1,4 @@
-package com.callor.student.service;
+package com.callor.student.service.impl;
 
 import com.callor.student.model.StudentVO;
 import com.callor.student.repository.StDao;
