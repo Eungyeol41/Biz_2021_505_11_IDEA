@@ -8,7 +8,26 @@
     <context:component-scan base-package="com.callor.readbook" />
 
     <mvc:resources mapping="/static/**" location="/static/" />
-    <mvc:annotation-driven />
+
+    <!--  Controller, Service, Annotation이 잘 작동하게 해주는 것  -->
+    <mvc:annotation-driven>
+        <mvc:message-converters>
+            <bean class="org.springframework.http.converter.StringHttpMessageConverter">
+                <property name="supportedMediaTypes">
+                    <list>
+                        <!-- return되는 type이 text이거나 json일 경우 인코딩한다 -->
+                        <value>text/html;charset=UTF-8</value>
+                        <value>application/json;charset=UTF-8</value>
+                        <!--
+                        API를 통해서 넘어가는 serializr 된 데이터들..
+                        application/json이 아닌 text/json으로 나오는...? 데이터들에 사용한다
+                        -->
+                        <value>text/json;charset=UTF-8</value>
+                    </list>
+                </property>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
 
     <bean class="org.springframework.web.servlet.view.UrlBasedViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView"/>
