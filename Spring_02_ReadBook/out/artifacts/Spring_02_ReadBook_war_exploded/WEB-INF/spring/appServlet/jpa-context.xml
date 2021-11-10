@@ -5,14 +5,59 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/data/jpa https://www.springframework.org/schema/data/jpa/spring-jpa.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- db.properties 파일을 읽어서 property의 value값에 placeholder(고정)시켜줘라! -->
-    <context:property-placeholder location="/WEB-INF/spring/props/db.properties" />
+    <!--
+    jasypt로 암호화된 username과 password를 db.properties로부터 가져와서
+    DataSource의 username과 password에 주입하기 위한 코드 구성
+
+    3개의 bean이 만들어질 예정
+    다음 3가지의 bean이 서로 연동되어 암호화된 문자열을 복호화하여 property에 주입
+    - PBEConfig bean
+    - PBEStringEncrypt bean
+    - PropertyPlaceHolderConfigurer bean
+    -->
+    <!-- 환경설정 -->
+    <bean id="envConfig" class="org.jasypt.encryption.pbe.config.EnvironmentStringPBEConfig">
+        <!-- value값 대소문자 구분 안 해도 상관 없지만 저 내용이 모두 들어가야 한다 -->
+        <property name="algorithm" value="PBEWithMD5AndDES" />
+        <!-- EncryptEx_01에 설정해놓은 salt 값 가져오기 -->
+        <!--
+        value값 대소문자 모두 일치해야 한다.
+        일치하지 않으면 EncryptionOperationNotPossibleException(Error)
+        -->
+        <property name="passwordEnvName" value="callor.com" />
+    </bean>
+
+    <!-- 복구 -->
+    <!-- envConfig를 setter 방식으로 받아서 사용한다 -->
+    <bean id="encryptor" class="org.jasypt.encryption.pbe.StandardPBEStringEncryptor">
+        <!-- envConfig가 객체이기 때문에 value가 아닌 ref로 주입해야 한다. -->
+        <property name="config" ref="envConfig" />
+    </bean>
+
+    <!-- 받은 planText를 property의 value에 주입 -->
+    <!--
+    db.properties의 값을 읽어서 무언가 처리를 하는 친구
+    그 와중에 encryptor의 도움을 받는다
+    -->
+    <bean class="org.jasypt.spring31.properties.EncryptablePropertyPlaceholderConfigurer">
+        <!-- 2번째에 만든 encryptor 를 3번째에 만든 친구에 생성자 주입 -->
+        <constructor-arg ref="encryptor" />
+        <!--
+        location: 1개의 property만 지정 가능
+        locations: 다수의 property 지정 가능
+        -->
+        <property name="locations">
+            <list>
+                <value>/WEB-INF/spring/props/db.conn.properties</value>
+            </list>
+        </property>
+    </bean>
 
     <bean id="ds" class="org.apache.commons.dbcp2.BasicDataSource">
-        <property name="driverClassName" value="${driverClassName}" />
-        <property name="url" value="${url}" />
-        <property name="username" value="${mysql.username}" />
-        <property name="password" value="${password}" />
+        <property name="driverClassName" value="${db.driver}" />
+        <property name="url" value="${db.url}" />
+        <property name="username" value="${db.username}" />
+        <property name="password" value="${db.password}" />
     </bean>
 
     <tx:annotation-driven />

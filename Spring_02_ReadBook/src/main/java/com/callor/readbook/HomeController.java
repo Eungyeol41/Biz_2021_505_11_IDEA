@@ -15,13 +15,13 @@ public class HomeController {
 
     // 문자열 변수에 Autowiring하는 것
     // @Value(): Controller에서 조회 가능하게 하는 것
-    @Value("${mysql.username}")
+    // @Value("${props.username}")
     private String userName;
-    @Value("${password}")
+    // @Value("${props.password}")
     private String password;
-    @Value("${driverClassName}")
+    // @Value("${props.driver}")
     private String className;
-    @Value("${url}")
+    // @Value("${props.url}")
     private String url;
 
     @ResponseBody
