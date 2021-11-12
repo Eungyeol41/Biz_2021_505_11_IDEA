@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="sec:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0cb2c75f-8bdb-48d0-bf6e-c50907e524b4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/.idea/Spring_03_SimpleSecurity.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/.idea/Spring_03_SimpleSecurity.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/.idea/artifacts/Spring_03_SimpleSecurity_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/.idea/artifacts/Spring_03_SimpleSecurity_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/Spring_03_Security.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/Spring_03_Security.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/src/main/java/com/callor/sec/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/src/main/java/com/callor/sec/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/src/main/java/com/callor/sec/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/src/main/java/com/callor/sec/controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/src/main/java/com/callor/sec/exec/BCrypt_01.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/src/main/java/com/callor/sec/exec/BCrypt_01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/src/main/java/com/callor/sec/models/UserDetailsVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/src/main/java/com/callor/sec/models/UserDetailsVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/src/main/java/com/callor/sec/service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/src/main/java/com/callor/sec/service/LoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/src/main/webapp/WEB-INF/applicationContext2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/src/main/webapp/WEB-INF/applicationContext2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/src/main/webapp/WEB-INF/views/member/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/src/main/webapp/WEB-INF/views/member/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Spring_03_SimpleSecurity/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="20nMrPovLX5VyKEfO0mMCCg6yiA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Spring_02_ReadBookAPI" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\bizworks\IDEASpring\Spring_04_SecurityJPA\src\main\webapp\WEB-INF\views\member" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\bizworks\IDEASpring\Spring_04_SecurityJPA\src\main\webapp" />
+      <recent name="C:\bizworks\IDEASpring\Spring_04_SecurityJPA\src\main\webapp\WEB-INF\spring" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.54" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.54" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="sec:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/sec" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="60176abb-ef7c-4cf3-a680-4262c3408d66" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="63262" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="sec:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0cb2c75f-8bdb-48d0-bf6e-c50907e524b4" name="Changes" comment="" />
+      <created>1636676096915</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1636676096915</updated>
+      <workItem from="1636676098816" duration="80000" />
+      <workItem from="1636676398134" duration="11441000" />
+      <workItem from="1636692548310" duration="2497000" />
+      <workItem from="1636698433070" duration="2105000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>

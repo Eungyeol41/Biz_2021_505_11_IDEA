@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 1rem;
+    background-color: lightblue;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-weight: bold;
+    text-align: center;
+    width: 80%;
+    margin: 1rem auto;
+}
+
+form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+form input {
+    padding: 0.5rem;
+}
+
+form div {
+    margin: 0.5rem;
+}
+
+div.input {
+    width: 80%;
+    display: flex;
+    padding: 5px;
+    margin: 5px auto;
+}
+
+div.input input, div.input label {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 8px;
+}
+
+div.input input {
+    flex: 1;
+    border: 1px solid #ddd;
+    outline: 0;
+    border-radius: 5px;
+}
+
+div.input label {
+    text-align: right;
+    color: cadetblue;
+    font-weight: bold;
+}
+
+div.btn_box {
+    text-align: right;
+    justify-content: right;
+    width: 89%;
+}
+
+button {
+    display: inline-block;
+    margin: 5px;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+
+    background-color: lightblue;
+}
+
+button:hover {
+    cursor: pointer;
+}

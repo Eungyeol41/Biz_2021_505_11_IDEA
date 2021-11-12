@@ -4,36 +4,42 @@
        xmlns:security="http://www.springframework.org/schema/security"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/security https://www.springframework.org/schema/security/spring-security.xsd">
 
-    <!-- spring security에 내장된 암호 검사 코드에서 사용할 bean -->
-    <bean id="passwordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+    <!--
+    spring security 에 내장된 암호 검사 코드에서
+    사용할 bean
+    -->
+    <bean  id="passwordEncoder"
+            class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
         <constructor-arg index="0" value="4" />
     </bean>
 
-    <bean id="cookieCsrfTokenRepository" class="org.springframework.security.web.csrf.CookieCsrfTokenRepository">
+    <bean id="cookieCsrfTokenRepository"
+          class="org.springframework.security.web.csrf.CookieCsrfTokenRepository">
         <property name="cookieHttpOnly" value="false"/>
     </bean>
 
     <security:http>
-        <security:intercept-url pattern="/login" access="permitAll()"/>
-        <security:intercept-url pattern="/member/login" access="permitAll()"/>
-        <security:intercept-url pattern="/**" access="isAuthenticated()"/>
-        <security:form-login username-parameter="username" password-parameter="password"/>
-        <security:logout/>
-        <security:csrf token-repository-ref="cookieCsrfTokenRepository"/>
+        <security:intercept-url pattern="/login" access="permitAll"/>
+        <security:intercept-url pattern="/member/login" access="permitAll"/>
+        <security:intercept-url pattern="/**" access="isAuthenticated()" />
+        <security:logout />
+        <security:csrf
+                token-repository-ref="cookieCsrfTokenRepository"/>
+
         <security:form-login
                 login-page="/member/login"
                 login-processing-url="/login"
                 username-parameter="username"
                 password-parameter="password"/>
-    </security:http>
 
-    <!--
+    </security:http>
     <security:authentication-manager>
         <security:authentication-provider>
             <security:user-service>
-                <security:user name="callor" authorities="ROLE_ADMIN" password="{noop}1234"/>
+                <security:user name="callor"
+                               authorities="ROLE_ADMIN"
+                               password="$2a$04$Hdu3p5qGzssmGRpq.I9UrehUnkLBtWXOMBy/FOSZMgm5rNAqSSOHa"/>
             </security:user-service>
         </security:authentication-provider>
     </security:authentication-manager>
-    -->
 </beans>
