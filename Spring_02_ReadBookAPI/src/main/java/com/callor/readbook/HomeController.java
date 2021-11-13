@@ -54,9 +54,19 @@ public class HomeController {
         return "api/jusoSearch";
     }
 
-    @RequestMapping(value = "/popup", method = RequestMethod.GET)
-    public String popup() {
-        return "api/jusoPopup";
+//    @RequestMapping(value = "/popup", method = RequestMethod.GET)
+//    public String popup() {
+//        return "api/jusoPopup";
+//    }
+
+    @RequestMapping(value = "/input", method = RequestMethod.GET)
+    public String input() {
+        return "api/juso_input";
+    }
+
+    @RequestMapping(value = "/jusoPopup", method = RequestMethod.GET)
+    public String jusoPopup() {
+        return "api/popup";
     }
 
 }

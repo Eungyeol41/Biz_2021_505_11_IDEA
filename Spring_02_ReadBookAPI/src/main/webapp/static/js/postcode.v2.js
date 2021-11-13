@@ -29,11 +29,7 @@ function getAddr() {
         data: {
             confmKey: "devU01TX0FVVEgyMDIxMTExMjE3MDEzOTExMTg3NzE=",
 
-            currentPage: document.getElementById("currentPage").value,
-
-            countPerPage: document.getElementById("countPerPage").value,
-
-            keyword: keyword.value,
+            resultUrl: "",
 
             resultType: "json",
         },

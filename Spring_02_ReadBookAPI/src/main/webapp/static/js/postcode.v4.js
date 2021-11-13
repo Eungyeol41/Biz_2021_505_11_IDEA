@@ -27,9 +27,11 @@ function getAddr() {
         type: "POST",
 
         data: {
-            confmKey: "devU01TX0FVVEgyMDIxMTExMjE3MDEzOTExMTg3NzE=",
+            confmKey: "devU01TX0FVVEgyMDIxMTExMjEzMTcxMTExMTg3NTE=",
 
-            resultUrl: "",
+            currentPage: document.getElementById("currentPage").value,
+
+            countPerPage: document.getElementById("countPerPage").value,
 
             resultType: "json",
         },
@@ -40,18 +42,6 @@ function getAddr() {
 
         success: function (jsonStr) {
             jQuery("#list").html("");
-
-            let errCode = jsonStr.results.common.errorCode;
-
-            let errDesc = jsonStr.results.common.errorMessage;
-
-            if (errCode == "0") {
-                if (jsonStr != null) {
-                    makeListJson(jsonStr);
-                }
-            } else {
-                alert(errDesc);
-            }
         },
 
         error: function (xhr, status, error) {
