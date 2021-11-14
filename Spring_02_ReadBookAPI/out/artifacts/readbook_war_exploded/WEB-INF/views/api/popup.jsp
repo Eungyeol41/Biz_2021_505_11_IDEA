@@ -81,7 +81,7 @@
     <input type="hidden" id="confmKey" name="confmKey" value=""/>
     <input type="hidden" id="returnUrl" name="returnUrl" value=""/>
     <input type="hidden" id="resultType" name="resultType" value=""/>
-    <input type="radio">여기다
+<%--    <input type="radio">여기다--%>
 <%--    // resultType항목 추가(2016.10.06)--%>
     <!-- 해당시스템의 인코딩타입이 EUC-KR일경우에만 추가 START-->
     <!--
