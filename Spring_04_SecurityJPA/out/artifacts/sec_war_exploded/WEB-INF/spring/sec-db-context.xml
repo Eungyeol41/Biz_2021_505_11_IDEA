@@ -12,28 +12,6 @@
         <property name="password" value="!Biz12341234"/>
     </bean>
 
-
-
-    <!--
-    <bean id="envConfig" class="org.jasypt.encryption.pbe.config.EnvironmentStringPBEConfig">
-        <property name="algorithm" value="PBEWithMD5AndDES" />
-        <property name="passwordEnvName" value="" />
-    </bean>
-
-    <bean id="encryptor" class="org.jasypt.encryption.pbe.StandardPBEStringEncryptor">
-        <property name="config" ref="envConfig" />
-    </bean>
-
-    <bean class="org.jasypt.spring31.properties.EncryptablePropertyPlaceholderConfigurer">
-        <constructor-arg ref="encryptor" />
-        <property name="locations">
-            <list>
-                <value>ds</value>
-            </list>
-        </property>
-    </bean>
--->
-
     <tx:annotation-driven/>
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="dataSource" ref="ds"/>

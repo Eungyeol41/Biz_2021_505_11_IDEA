@@ -33,6 +33,7 @@
     <properties>
         <maven.compiler.source>15</maven.compiler.source>
         <maven.compiler.target>15</maven.compiler.target>
+        <jasypt.version>1.9.3</jasypt.version>
     </properties>
 
     <dependencies>
@@ -175,8 +176,19 @@
             <version>3.6.0</version>
         </dependency>
 
-
+        <!-- Jasypt -->
+        <!-- https://mvnrepository.com/artifact/org.jasypt/jasypt -->
+        <dependency>
+            <groupId>org.jasypt</groupId>
+            <artifactId>jasypt</artifactId>
+            <version>${jasypt.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.jasypt/jasypt-spring31 -->
+        <dependency>
+            <groupId>org.jasypt</groupId>
+            <artifactId>jasypt-spring31</artifactId>
+            <version>${jasypt.version}</version>
+        </dependency>
 
     </dependencies>
-
 </project>
