@@ -98,6 +98,15 @@
             <version>2.13.0</version>
         </dependency>
 
+        <!-- jasypt & jasypt-spring31 -->
+        <!-- https://mvnrepository.com/artifact/org.jasypt/jasypt-spring31 -->
+        <dependency>
+            <groupId>org.jasypt</groupId>
+            <artifactId>jasypt-spring31</artifactId>
+            <version>1.9.3</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>

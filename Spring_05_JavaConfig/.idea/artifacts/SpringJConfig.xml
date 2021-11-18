@@ -28,6 +28,8 @@
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.32" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:5.2.18.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.2.18.RELEASE" />
+          <element id="library" level="project" name="Maven: org.jasypt:jasypt-spring31:1.9.3" />
+          <element id="library" level="project" name="Maven: org.jasypt:jasypt:1.9.3" />
         </element>
         <element id="directory" name="classes">
           <element id="module-output" name="Spring_05_JavaConfig" />
