@@ -1,0 +1,56 @@
+* {
+    /* padding이나 margin border 등을 설정했을 때 방해받지 않게 하기 위한..? */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+header, nav, section.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    background-color: grey;
+    padding: 2rem;
+    color: white;
+}
+
+nav {
+    background-color: gainsboro;
+    padding: 0.6rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav input {
+    /*width: 70%;*/
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid gainsboro;
+}
+
+section.main {
+    flex: 1;
+}
+
+footer {
+    background-color: grey;
+    color: white;
+
+    text-align: center;
+    padding: 0.7rem;
+}

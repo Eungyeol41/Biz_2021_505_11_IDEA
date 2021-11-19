@@ -4,7 +4,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
-import org.jasypt.encryption.pbe.config.EnvironmentStringPBEConfig;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.annotation.MapperScan;
@@ -31,25 +30,9 @@ public class MyBatisConfig {
     @Value("${db.password}")
     private String password;
 
-    // 환경변수에서 비밀번호를 가져와서 암호화시키는 코드
-    private EnvironmentStringPBEConfig envConfig() {
-        EnvironmentStringPBEConfig config = new EnvironmentStringPBEConfig();
-
-        config.setAlgorithm("PBEWithMD5AndDES");
-        config.setPasswordEnvName("callor.com");
-
-        log.debug("ENV : " + config.getPasswordEnvName() + config.getPassword());
-
-        return config;
-    }
-
-    // 비밀번호를 복구화시키는 코드
-    private StandardPBEStringEncryptor encryptor() {
-        StandardPBEStringEncryptor encryptor = new StandardPBEStringEncryptor();
-
-        encryptor.setConfig(this.envConfig());
-
-        return encryptor;
+    private final StandardPBEStringEncryptor encryptor;
+    public MyBatisConfig(StandardPBEStringEncryptor encryptor) {
+        this.encryptor = encryptor;
     }
 
     // dataSource
@@ -62,8 +45,8 @@ public class MyBatisConfig {
         log.debug("USERNAME" + username);
 
         // 암호화된 username과 password를 복구하기
-        String planUsername = this.encryptor().decrypt(username);
-        String planPassword = this.encryptor().decrypt(password);
+        String planUsername = this.encryptor.decrypt(username);
+        String planPassword = this.encryptor.decrypt(password);
 
         ds.setUsername(planUsername);
         ds.setPassword(planPassword);
